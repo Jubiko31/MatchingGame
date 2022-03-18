@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px 0px;
+    background: #6589F9;
+}
+
+.grid {
+    max-width: 968px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card,
+.back,
+.face {
+    height: 150px;
+    width: 150px;
+}
+
+.back,
+.face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.face {
+    background: #fab942 url('') no-repeat center center / contain;
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #6589F9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match .face {
+    background: #6589F9 !important;
+}
+
+/*-------------------FOOTER----------------------*/
+footer {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
